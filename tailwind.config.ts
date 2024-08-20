@@ -8,6 +8,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./constants/**/*.{ts,tsx}",
+    "/.components/TotalBalanceBox.tsx",
   ],
   prefix: "",
   theme: {
@@ -24,6 +25,7 @@ const config = {
           1: "rgba(255, 255, 255, 0.10)",
         },
         bankGradient: "#0179FE",
+        
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
