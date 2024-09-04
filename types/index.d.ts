@@ -26,6 +26,7 @@ declare type LoginUser = {
 };
 
 declare type User = {
+  
   $id: string;
   email: string;
   userId: string;
@@ -33,6 +34,8 @@ declare type User = {
   dwollaCustomerId: string;
   firstName: string;
   lastName: string;
+  name: string;
+ 
   address1: string;
   city: string;
   state: string;
@@ -49,7 +52,7 @@ declare type NewUserParams = {
 };
 
 declare type Account = {
-  id: string;
+  $id: string;
   availableBalance: number;
   currentBalance: number;
   officialName: string;
@@ -210,12 +213,13 @@ declare interface TotlaBalanceBoxProps {
 
 declare interface FooterProps {
   user: User;
+  type?: "mobile" | "desktop";
 }
 
 declare interface RightSidebarProps {
   user: User;
   transactions: Transaction[];
-  banks: Bank[] & Account[];
+  banks: banks[[]] & Account[];
 }
 
 declare interface SiderbarProps {
@@ -254,6 +258,8 @@ declare interface PaymentTransferFormProps {
   accounts: Account[];
 }
 
+
+
 // Actions
 declare interface getAccountsProps {
   userId: string;
@@ -277,7 +283,7 @@ declare interface CreateFundingSourceOptions {
   plaidToken: string; // Plaid Account Processor Token
   _links: object; // Dwolla On Demand Authorization Link
 }
-
+ 
 declare interface CreateTransactionProps {
   name: string;
   amount: string;
